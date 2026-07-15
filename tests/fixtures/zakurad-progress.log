@@ -1,0 +1,2 @@
+2026-07-15T17:01:15.561562Z INFO inbound:download_and_verify: downloaded and verified gossiped block height=Height(3413389)
+2026-07-15T17:01:23.241623Z INFO zakurad::components::sync::progress: finished initial sync to chain tip, using gossiped blocks sync_percent=99.824% current_height=Height(3413389) network_upgrade=Nu6_2 remaining_sync_blocks=5928 time_since_last_state_block=5s

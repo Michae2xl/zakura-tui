@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zakura-tui"
+version = "0.1.0"
+description = "Portable terminal monitor for Zakura nodes"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "CairoSVG>=2.7,<3",
+  "Pillow>=10.4,<12",
+  "pytest>=8.3,<9",
+  "pytest-timeout>=2.3,<3",
+]
+
+[project.scripts]
+zakura-status = "zakura_tui.cli:status_main"
+zakura-start = "zakura_tui.cli:start_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+timeout = 10
+pythonpath = ["."]

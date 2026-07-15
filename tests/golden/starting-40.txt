@@ -1,0 +1,8 @@
+(*) ZAKURA
+MAINNET / PRUNED
+WAITING FOR NODE
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+HEIGHT --  SYNC --
+LEFT --  UPGRADE --
+service active  health waiting
+refresh 2s  Ctrl+C to exit

@@ -1,0 +1,12 @@
+service_name = "zakura-pruned"
+health_url = "http://127.0.0.1:8231/ready"
+log_path = "/var/log/zakura/zakurad.log"
+zakurad_path = "/usr/local/bin/zakurad"
+zakura_config_path = "/etc/zakura/zakura.toml"
+network = "Mainnet"
+storage_mode = "pruned"
+refresh_seconds = 2.0
+startup_grace_seconds = 15.0
+health_stale_seconds = 10.0
+tip_timeout_seconds = 15.0
+start_command = ["systemctl", "start", "zakura-pruned"]
