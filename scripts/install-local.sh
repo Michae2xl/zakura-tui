@@ -17,3 +17,15 @@ ln -sfn "$venv/bin/zakura-start" "$bin_dir/zakura-start"
 
 printf 'Installed zakura-status and zakura-start in %s\n' "$bin_dir"
 printf 'Configuration: %s/config.toml\n' "$config_dir"
+
+case ":${PATH:-}:" in
+  *":$bin_dir:"*)
+    ;;
+  *)
+    printf '\nWarning: %s is not currently on PATH.\n' "$bin_dir"
+    printf '%s\n' 'For this shell session, run:'
+    printf '  %s\n' 'export PATH="$HOME/.local/bin:$PATH"'
+    printf '%s\n' 'For future shells, add the same export to your shell startup file.'
+    printf '%s\n' 'For Bash, use ~/.profile; for other shells, use the appropriate startup file.'
+    ;;
+esac

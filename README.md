@@ -17,8 +17,19 @@ standard library and terminal-native Unicode/ANSI output.
 
 ```bash
 ./scripts/install-local.sh
+```
+
+The commands are installed in `~/.local/bin`. If that directory is not on
+`PATH`, the installer prints a warning. Activate it for the
+current shell session with:
+
+```bash
 export PATH="$HOME/.local/bin:$PATH"
 ```
+
+For future Bash sessions, add the same export line to `~/.profile`, then open a
+new terminal. Users of other shells should add it to the appropriate shell
+startup file.
 
 Edit `~/.config/zakura-tui/config.toml` so the service name and paths match
 your local Zakura node installation. Live monitoring and service control
