@@ -112,3 +112,10 @@ def test_installer_guides_only_when_local_bin_is_missing_from_path(
 
     assert present.returncode == 0, present.stderr
     assert "not currently on PATH" not in present.stdout
+
+
+def test_readme_distinguishes_temporary_and_persistent_path_setup() -> None:
+    readme = Path("README.md").read_text("utf-8")
+    assert "current shell session" in readme
+    assert "~/.profile" in readme
+    assert "other shells" in readme
